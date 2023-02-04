@@ -16,36 +16,55 @@ public class SellerService {
 @Autowired	
 SellerRepository sellerRepository;  
 
-public Seller sellerPost(Seller seller) {	
-	if(!seller.equals(null)) {  
-		return sellerRepository.save(seller); 
-	}
-	return null;
+public Seller save( Seller cat) {
+    
+    if(!cat.equals(null)) {
+        return sellerRepository.save(cat);
+    }
+    return null;
 }
 
-public Seller sellergetById(Long id) {
-	Optional<Seller> optional = sellerRepository.findById(id);
-	if (optional.isPresent()) {
-		return optional.get();
-	}
-	return null;
+public Seller getById(Long id) {
+Optional<Seller> op = sellerRepository.findById(id);
+
+if(op.isPresent()) {
+    return op.get();
 }
 
-public Seller sellerDelete() {
-	
-	return null;
+return null;
 }
 
-public Seller sellerUpdate() {
-	
-	return null;
+public List<Seller> getAll(){
+return sellerRepository.findAll();
 }
 
-public List<Seller> sellerAllGet() {
-	
-	
-	return sellerRepository.findAll();
+public Seller delete (Long id) {
+
+Optional<Seller> op = sellerRepository.findById(id);
+if(op.isPresent()) {
+	sellerRepository.delete(op.get());
+    return null;
+    
+    
+    
+}
+return null;
+
 }
 
+
+public Seller update( Seller cat) {
+
+if(!cat.equals(null)) {
+    return sellerRepository.save(cat);
+}
+return null;
+}
+
+public List<Seller>  listinsert( List<Seller> listofProducts) {
+
+return sellerRepository.saveAll(listofProducts);
+
+}
 
 }

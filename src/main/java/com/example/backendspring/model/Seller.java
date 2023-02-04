@@ -31,6 +31,7 @@ public class Seller {
 	private int salary;
 	private String branch;
 	private String phone;
+	
 	public long getId() {
 		return id;
 	}
