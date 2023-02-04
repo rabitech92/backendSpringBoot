@@ -31,20 +31,20 @@ public Seller sellergetById(Long id) {
 	return null;
 }
 
-public Seller customerDelete() {
+public Seller sellerDelete() {
 	
 	return null;
 }
 
-public Seller customerUpdate() {
+public Seller sellerUpdate() {
 	
 	return null;
 }
 
-public List<Seller> customerGet() {
+public List<Seller> sellerAllGet() {
 	
 	
-	return null;
+	return sellerRepository.findAll();
 }
 
 
