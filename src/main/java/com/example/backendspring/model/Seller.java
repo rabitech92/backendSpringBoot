@@ -1,5 +1,7 @@
 package com.example.backendspring.model;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -24,7 +26,7 @@ public class Seller {
 	private String userName;
 	private String fatherName;
 	private String motherName;
-	private String dOfBirth;
+	private Date dOfBirth;
 	private String address;
 	private int salary;
 	private String branch;
@@ -59,10 +61,10 @@ public class Seller {
 	public void setMotherName(String motherName) {
 		this.motherName = motherName;
 	}
-	public String getdOfBirth() {
+	public Date getdOfBirth() {
 		return dOfBirth;
 	}
-	public void setdOfBirth(String dOfBirth) {
+	public void setdOfBirth(Date dOfBirth) {
 		this.dOfBirth = dOfBirth;
 	}
 	public String getAddress() {
