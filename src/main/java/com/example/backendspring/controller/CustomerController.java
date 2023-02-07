@@ -19,33 +19,33 @@ import com.example.backendspring.service.CustomerService;
 
 @RestController
 @CrossOrigin(origins="http://localhost:4200" ,allowedHeaders = "*")
-@RequestMapping(value="/apa")
+@RequestMapping(value="/api")
 public class CustomerController {
 	
 
 	@Autowired
 	private CustomerService customerService;
 	
-	@PostMapping("/Catsave")
+	@PostMapping("/cussave")
     public Customer save(@RequestBody Customer cat) {
         
         
         return customerService.save(cat);
     }
     
-    @GetMapping("/Catget/{id}")
+    @GetMapping("/cusget/{id}")
     public Customer getById (@PathVariable Long id) {
         
         return customerService.getById(id);
     }
     
-    @PutMapping("/Catupdate")
+    @PutMapping("/cusupdate")
     public Customer update(@RequestBody Customer cat) {
         
         return customerService.update(cat);
     }
     
-    @DeleteMapping("/Catdelete/{id}")    //browser theke del korte gele @GetMapping dite hobe 
+    @DeleteMapping("/cusdelete/{id}")    //browser theke del korte gele @GetMapping dite hobe 
     public String delete (@PathVariable Long id) {
         
     	customerService.delete(id);
@@ -53,7 +53,7 @@ public class CustomerController {
          return null;
     }
     
-    @GetMapping("/CatgetAll")
+    @GetMapping("/cusgetAll")
     public List<Customer> modelget () {
         
         return customerService.getAll();
