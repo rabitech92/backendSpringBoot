@@ -26,26 +26,26 @@ public class CustomerController {
 	@Autowired
 	private CustomerService customerService;
 	
-	@PostMapping("/save")
+	@PostMapping("/Catsave")
     public Customer save(@RequestBody Customer cat) {
         
         
         return customerService.save(cat);
     }
     
-    @GetMapping("/get/{id}")
+    @GetMapping("/Catget/{id}")
     public Customer getById (@PathVariable Long id) {
         
         return customerService.getById(id);
     }
     
-    @PutMapping("/update")
+    @PutMapping("/Catupdate")
     public Customer update(@RequestBody Customer cat) {
         
         return customerService.update(cat);
     }
     
-    @DeleteMapping("/delete/{id}")    //browser theke del korte gele @GetMapping dite hobe 
+    @DeleteMapping("/Catdelete/{id}")    //browser theke del korte gele @GetMapping dite hobe 
     public String delete (@PathVariable Long id) {
         
     	customerService.delete(id);
@@ -53,7 +53,7 @@ public class CustomerController {
          return null;
     }
     
-    @GetMapping("/getAll")
+    @GetMapping("/CatgetAll")
     public List<Customer> modelget () {
         
         return customerService.getAll();
