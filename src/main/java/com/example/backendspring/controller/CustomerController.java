@@ -27,11 +27,25 @@ public class CustomerController {
 	private CustomerService customerService;
 	
 	@PostMapping("/cussave")
-    public Customer save(@RequestBody Customer cus) {
-        
+    public Customer save(@RequestBody Customer cus) {       
         
         return customerService.save(cus);
     }
+	
+	@GetMapping("/cusgetAll")
+    public List<Customer> modelget () {
+        
+        return customerService.getAll();
+    }
+	
+	@DeleteMapping("/cusdelete/{id}")    //browser theke del korte gele @GetMapping dite hobe 
+    public String delete (@PathVariable Long id) {
+        
+    	customerService.delete(id);
+//         wareRepo.deleteById(id);
+         return null;
+    }
+    
     
     @GetMapping("/cusget/{id}")
     public Customer getById (@PathVariable Long id) {
@@ -45,19 +59,8 @@ public class CustomerController {
         return customerService.update(cus);
     }
     
-    @DeleteMapping("/cusdelete/{id}")    //browser theke del korte gele @GetMapping dite hobe 
-    public String delete (@PathVariable Long id) {
-        
-    	customerService.delete(id);
-//         wareRepo.deleteById(id);
-         return null;
-    }
     
-    @GetMapping("/cusgetAll")
-    public List<Customer> modelget () {
-        
-        return customerService.getAll();
-    }
+    
 
 	
 	

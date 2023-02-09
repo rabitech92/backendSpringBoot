@@ -31,10 +31,25 @@ public class SellerController {
         
         return sellerService.save(cat);
     }
+
+    @GetMapping("/getAll")
+    public List<Seller> modelget () {
+
+        return sellerService.getAll();
+    }
+
+    @DeleteMapping("/delete/{id}")    //browser theke del korte gele @GetMapping dite hobe
+    public String delete (@PathVariable Long id) {
+
+
+        sellerService.delete(id);
+//         wareRepo.deleteById(id);
+        return null;
+    }
     
     @GetMapping("/get/{id}")
     public Seller getById (@PathVariable Long id) {
-        
+
         return sellerService.getById(id);
     }
     
@@ -44,19 +59,8 @@ public class SellerController {
         return sellerService.update(cat);
     }
     
-    @DeleteMapping("/delete/{id}")    //browser theke del korte gele @GetMapping dite hobe 
-    public String delete (@PathVariable Long id) {
-        
-        
-    	sellerService.delete(id);
-//         wareRepo.deleteById(id);
-         return null;
-    }
+
     
-    @GetMapping("/getAll")
-    public List<Seller> modelget () {
-        
-        return sellerService.getAll();
-    }
+
 
 }

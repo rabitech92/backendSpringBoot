@@ -39,7 +39,6 @@ return sellerRepository.findAll();
 }
 
 public Seller delete (Long id) {
-
 Optional<Seller> op = sellerRepository.findById(id);
 if(op.isPresent()) {
 	sellerRepository.delete(op.get());
