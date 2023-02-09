@@ -14,9 +14,9 @@ public class CustomerService {
 	
 	@Autowired
 	CustomerRepository customerRepository;
-	public Customer save( Customer cat) {	    
-	    if(!cat.equals(null)) {
-	        return customerRepository.save(cat);
+	public Customer save( Customer cus) {	    
+	    if(!cus.equals(null)) {
+	        return customerRepository.save(cus);
 	    }
 	    return null;
 	}
@@ -35,26 +35,26 @@ public class CustomerService {
 	return customerRepository.findAll();
 	}
 
-	public Customer delete (Long id) {
-	Optional<Customer> op = customerRepository.findById(id);
-	if(op.isPresent()) {
-		customerRepository.delete(op.get());
+	public Customer delete(Long id) {
+	Optional<Customer> cutomer = customerRepository.findById(id);
+	if(cutomer.isPresent()) {
+		customerRepository.delete(cutomer.get());
 	    return null;	       
 	}
 	return null;
 	}
 
 
-	public Customer update( Customer cat) {
-	if(!cat.equals(null)) {
-	    return customerRepository.save(cat);
+	public Customer update( Customer cus) {
+	if(!cus.equals(null)) {
+	    return customerRepository.save(cus);
 	}
 	return null;
 	}
 
-	public List<Customer>  listinsert( List<Customer> listofProducts) {
+	public List<Customer>  listinsert( List<Customer> listofCustomer) {
 
-	return customerRepository.saveAll(listofProducts);
+	return customerRepository.saveAll(listofCustomer);
 
 	}
 

@@ -27,10 +27,10 @@ public class CustomerController {
 	private CustomerService customerService;
 	
 	@PostMapping("/cussave")
-    public Customer save(@RequestBody Customer cat) {
+    public Customer save(@RequestBody Customer cus) {
         
         
-        return customerService.save(cat);
+        return customerService.save(cus);
     }
     
     @GetMapping("/cusget/{id}")
@@ -40,9 +40,9 @@ public class CustomerController {
     }
     
     @PutMapping("/cusupdate")
-    public Customer update(@RequestBody Customer cat) {
+    public Customer update(@RequestBody Customer cus) {
         
-        return customerService.update(cat);
+        return customerService.update(cus);
     }
     
     @DeleteMapping("/cusdelete/{id}")    //browser theke del korte gele @GetMapping dite hobe 
