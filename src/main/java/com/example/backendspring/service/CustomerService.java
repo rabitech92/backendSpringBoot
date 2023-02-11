@@ -46,7 +46,8 @@ public class CustomerService {
 
 
 	public Customer update( Customer cus) {
-	if(!cus.equals(null)) {
+	if(!cus.getId().equals(null)) {
+		System.err.println(cus.toString());
 	    return customerRepository.save(cus);
 	}
 	return null;
