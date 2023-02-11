@@ -22,9 +22,9 @@ public class Product {
     private String pName;
     private String pType;
     private String pBrand;
-    private String pQty;
-    private String pInvPrice;
-    private String pSelPrice;
+    private int pQty;
+    private int pInvPrice;
+    private int pSelPrice;
     private String suppliarName;
     private String suppliarAddress;
 
@@ -68,27 +68,27 @@ public class Product {
         this.pBrand = pBrand;
     }
 
-    public String getpQty() {
+    public int getpQty() {
         return pQty;
     }
 
-    public void setpQty(String pQty) {
+    public void setpQty(int pQty) {
         this.pQty = pQty;
     }
 
-    public String getpInvPrice() {
+    public int getpInvPrice() {
         return pInvPrice;
     }
 
-    public void setpInvPrice(String pInvPrice) {
+    public void setpInvPrice(int pInvPrice) {
         this.pInvPrice = pInvPrice;
     }
 
-    public String getpSelPrice() {
+    public int getpSelPrice() {
         return pSelPrice;
     }
 
-    public void setpSelPrice(String pSelPrice) {
+    public void setpSelPrice(int pSelPrice) {
         this.pSelPrice = pSelPrice;
     }
 

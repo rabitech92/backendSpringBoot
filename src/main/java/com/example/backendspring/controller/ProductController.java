@@ -40,8 +40,6 @@ public class ProductController {
 
     @DeleteMapping("/deletePod/{id}")    //browser theke del korte gele @GetMapping dite hobe
     public String delete (@PathVariable Long id) {
-
-
     	productService.delete(id);
 //         wareRepo.deleteById(id);
         return null;
