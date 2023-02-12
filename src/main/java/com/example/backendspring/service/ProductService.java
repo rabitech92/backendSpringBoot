@@ -27,7 +27,6 @@ public class ProductService {
 
 	public Product getById(Long id) {
 	Optional<Product> op = productRepository.findById(id);
-
 	if(op.isPresent()) {
 	    return op.get();
 	}
@@ -49,15 +48,14 @@ public class ProductService {
 	}
 
 
-	public Product update( Product cat) {
-	if(!cat.equals(null)) {
-	    return productRepository.save(cat);
+	public Product update( Product pod) {
+	if(!pod.equals(null)) {
+	    return productRepository.save(pod);
 	}
 	return null;
 	}
 
 	public List<Product>  listinsert( List<Product> listofProducts) {
-
 	return productRepository.saveAll(listofProducts);
 
 	}
