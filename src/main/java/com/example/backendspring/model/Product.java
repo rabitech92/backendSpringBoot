@@ -27,9 +27,6 @@ public class Product {
     private int pSelPrice;
     private String suppliarName;
     private String suppliarAddress;
-    
-    
-    
 	public Long getId() {
 		return id;
 	}
@@ -90,6 +87,7 @@ public class Product {
 	public void setSuppliarAddress(String suppliarAddress) {
 		this.suppliarAddress = suppliarAddress;
 	}
-
-   
+    
+    
+       
 }
