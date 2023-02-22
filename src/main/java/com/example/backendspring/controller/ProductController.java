@@ -19,8 +19,8 @@ import com.example.backendspring.service.ProductService;
 
 
 @RestController
-@CrossOrigin(origins="http://localhost:4200" ,allowedHeaders = "*")
 @RequestMapping(value="/api")
+@CrossOrigin(origins="http://localhost:4200" ,allowCredentials  = "true")
 public class ProductController {
 	
 	@Autowired
