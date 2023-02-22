@@ -18,8 +18,7 @@ public class ProductService {
 	ProductRepository productRepository;  
 
 	public Product save( Product pod) {
-	    
-	    if(!pod.equals(null)) {
+	     if(!pod.equals(null)) {
 	        return productRepository.save(pod);
 	    }
 	    return null;
@@ -38,19 +37,19 @@ public class ProductService {
 	return productRepository.findAll();
 	}
 
-	public Product delete (Long id) {
-	Optional<Product> op = productRepository.findById(id);
-	if(op.isPresent()) {
-		productRepository.delete(op.get());
+	public Product delete(Long id) {
+	Optional<Product> por = productRepository.findById(id);
+	if(por.isPresent()) {
+		productRepository.delete(por.get());
 	    return null;	    
 	 	}
 	return null;
 	}
 
 
-	public Product update( Product pod) {
-	if(!pod.equals(null)) {
-	    return productRepository.save(pod);
+	public Product update(Product poro) {
+	if(!poro.equals(null)) {
+	    return productRepository.save(poro);
 	}
 	return null;
 	}

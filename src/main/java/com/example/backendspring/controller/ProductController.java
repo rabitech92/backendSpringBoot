@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.backendspring.model.Customer;
 import com.example.backendspring.model.Product;
 import com.example.backendspring.service.ProductService;
 
@@ -26,18 +27,22 @@ public class ProductController {
 	private ProductService productService;
 	
 	@PostMapping("/savePod")
-    public Product save (@RequestBody Product pod) {
-        
-        
-        return productService.save(pod);
+    public Product save(@RequestBody Product poro) {    
+        return productService.save(poro);
     }
-
-    @GetMapping("/getAllPod")
+	
+	@GetMapping("/getAllPro")
     public List<Product> modelget () {
-
+        
         return productService.getAll();
     }
 
+//    @GetMapping("/getAllPod")
+//    public List<Product> modelget() {
+//        return productService.getAll();
+//    }
+
+    
     @DeleteMapping("/deletePod/{id}")    //browser theke del korte gele @GetMapping dite hobe
     public String delete (@PathVariable Long id) {
     	productService.delete(id);
@@ -47,7 +52,6 @@ public class ProductController {
     
     @GetMapping("/getPod/{id}")
     public Product getById (@PathVariable Long id) {
-
         return productService.getById(id);
     }
     
