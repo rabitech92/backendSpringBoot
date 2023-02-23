@@ -27,6 +27,8 @@ public class Product {
     private int pSelPrice;
     private String suppliarName;
     private String suppliarAddress;
+    
+    
 	public Long getId() {
 		return id;
 	}
