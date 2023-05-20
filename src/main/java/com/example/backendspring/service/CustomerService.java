@@ -23,17 +23,17 @@ public class CustomerService {
 
 	public Customer getById(Long id) {
 	Optional<Customer> op = customerRepository.findById(id);
-
 	if(op.isPresent()) {
 	    return op.get();
 	}
-
 	return null;
 	}
+	
 
 	public List<Customer> getAll(){
 	return customerRepository.findAll();
 	}
+	
 
 	public Customer delete(Long id) {
 	Optional<Customer> cutomer = customerRepository.findById(id);
