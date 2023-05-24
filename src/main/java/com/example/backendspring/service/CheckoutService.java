@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.backendspring.model.CheckoutProduct;
-import com.example.backendspring.model.Product;
 import com.example.backendspring.repository.CheckoutRepository;
 
 @Service
@@ -46,3 +45,4 @@ public class CheckoutService {
 	
 
 }
+9tyvytg9yu
